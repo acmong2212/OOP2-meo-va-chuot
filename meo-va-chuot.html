@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    class Mouse{
+        name;
+        weight;
+        speed;
+        status;
+
+        constructor(name, weight, speed, status) {
+            this.name = name
+            this.weight = weight
+            this.speed = speed
+            this.status = status
+        }
+
+        getName(){
+            return this.name
+        }
+
+        setName(name){
+            this.name = name
+        }
+
+        getWeight(){
+            return  this.weight
+        }
+
+        getSpeed(){
+            return this.speed
+        }
+
+        getStatus(){
+            if (this.status > 0){
+                return true
+            } else {
+                return false
+            }
+        }
+
+        say(String){
+            return String
+        }
+    }
+
+    class Cat{
+        name;
+        weight;
+        speed;
+        status;
+
+        constructor(name, weight, speed, status) {
+            this.name = name
+            this.weight = weight
+            this.speed = speed
+            this.status = status
+        }
+
+        getName(){
+            return this.name
+        }
+
+        setName(name){
+            this.name = name
+        }
+
+        getWeight(){
+            return this.weight + 10
+        }
+
+        setWeight(weight){
+            return this.weight = weight
+        }
+
+        getSpeed(){
+            return this.speed
+        }
+
+        say(String){
+            return String
+        }
+
+        eat(Mouse){
+            if (Mouse > 0){
+                return this.weight++
+            }
+        }
+
+        getStatus(){
+            if (this.status > 0){
+                return true
+            } else {
+                return false
+            }
+        }
+    }
+
+    let mouse = new Mouse('Rat', 10, 500, true)
+    let cat = new Cat("Tom", 20, 1000, true)
+
+    cat.setName('Tom')
+    console.log('Name: ',cat.getName())
+    console.log('Status cat current: ', cat.getStatus())
+    console.log('Weight cat current: ', cat.setWeight(20))
+
+    mouse.setName('Rat')
+    console.log('Name: ',mouse.getName())
+    console.log('Status mouse current: ', mouse.getStatus())
+    console.log('Weight mouse current: ', mouse.getWeight())
+
+    cat.say()
+    console.log(cat.say('Ê chuột tao đẹp trai không?'))
+    mouse.say()
+    console.log(mouse.say('Không!!!!!'))
+
+    console.log('Speed of mouse: ' , mouse.getSpeed())
+    console.log('Speed of cat: ' , cat.getSpeed())
+
+    cat.eat(Mouse)
+    cat.getWeight()
+    console.log('The cat ate the mouse ', cat.getWeight())
+</script>
+</html>
